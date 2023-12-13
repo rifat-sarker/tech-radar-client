@@ -19,8 +19,8 @@ const Register = () => {
     console.log(user);
 
     //clear success and error
-    setSuccess("");
-    setRegisterError("");
+    setSuccess('')
+    setRegisterError('')
 
     if (password.length < 6) {
       setRegisterError("Password should be at least 6 characters or longer");

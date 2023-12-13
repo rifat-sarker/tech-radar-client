@@ -34,8 +34,8 @@ const Login = () => {
 
 
     //clear success and error
-    setSuccess("");
-    setRegisterError("");
+   setSuccess('')
+   setRegisterError('')
 
     signIn(email, password)
       .then((result) => {

@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className="navbar-end">
         
         {user ? (
-          <><p className="mr-3 font-semibold">{user.email}</p><button className="font-bold btn" onClick={SignOut}>Logout</button></>
+          <><p className="mr-3 font-semibold">{user.email}{user.name}</p><img className="w-10 rounded-full mr-4" src={userPicture} alt="" /><button className="font-bold" onClick={SignOut}>Sign Out</button></>
         ) : ( 
           <Link to="/login">
             <button className="font-bold">Login</button>
