@@ -1,37 +1,56 @@
 import { useContext, useState } from "react";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext)
-    const [success, setSucccess] = useState("");
-    const handleSignIn = e => {
-        e.preventDefault();
-        const form = e.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        const user = {email,password}
-        console.log(user);
+  const { signIn, googleLogIn } = useContext(AuthContext);
+  const [success, setSuccess] = useState("");
+  const [registerError, setRegisterError] = useState('')
+  const navigate = useNavigate()
+  const location = useLocation()
 
-        signIn(email,password)
-        .then((result)=> {
-            console.log(result.user);
-            toast.success("Accound created successfully", {
-                duration: 2000,
-                position: "bottom-center",
-              });
+  //google login
+  const handleGoogleLogin = ()=> {
+    googleLogIn()
+    .then(result => {
+      console.log(result.user);
+      navigate(location?.state ? location.state : "/");
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  }
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const name = form.name.value;
+    const password = form.password.value;
+    const user = {name, email, password };
+    console.log(user);
 
-        })
-        .catch(error => {
-            console.error(error)
-        })
-    }
+
+    //clear success and error
+    setSuccess("");
+    setRegisterError("");
+
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        toast.success("login  successfully", {
+          duration: 2000,
+          position: "bottom-center",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+      
+  };
   return (
     <div>
       <Navbar></Navbar>
@@ -48,7 +67,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
-                  name = 'email'
+                  name="email"
                   placeholder="email"
                   className="input input-bordered"
                   required
@@ -60,7 +79,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
-                  name = 'password'
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
                   required
@@ -74,7 +93,15 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
               </div>
-              <p>Don't have an account? Please <Link className="btn" to="/register">Register</Link></p>
+              <p>
+                Don't have an account? Please{" "}
+                <Link className="btn" to="/register">
+                  Register
+                </Link>
+              </p>
+              <button className="text-2xl btn bg-blue-500 text-white" onClick={handleGoogleLogin}>Google</button>
+
+              {registerError && <p className="text-red-600">{registerError}</p>}
               {success && <p className="text-green-600"> {success} </p>}
             </form>
             <ToastContainer></ToastContainer>

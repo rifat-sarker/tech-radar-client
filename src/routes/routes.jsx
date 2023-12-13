@@ -5,6 +5,7 @@ import AddProduct from "../components/AddProduct";
 import MyCart from "../components/MyCart";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -17,11 +18,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addproduct',
-                element: <AddProduct></AddProduct>
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
                 path: 'mycart',
-                element: <MyCart></MyCart>
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
             },
             {
                 path: 'login',
