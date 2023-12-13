@@ -48,7 +48,6 @@ const Register = () => {
         console.log(error);
         setRegisterError(error.message);
       });
-     
   };
   return (
     <div>
