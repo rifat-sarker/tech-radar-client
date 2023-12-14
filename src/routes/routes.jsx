@@ -11,10 +11,12 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        loader: ()=> fetch('http://localhost:5000/product'),
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                
             },
             {
                 path: 'addproduct',

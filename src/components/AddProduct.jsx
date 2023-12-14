@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Swal from "sweetalert2";
+
 
 const AddProduct = () => {
   const handleAddProduct = (e) => {
@@ -14,6 +16,25 @@ const AddProduct = () => {
     const imageURL = form.imageURL.value;
     const newProduct = {name,brand,type,price,description,rating,imageURL}
     console.log(newProduct);
+    fetch('http://localhost:5000/product', {
+        method: "POST",
+        headers : {
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify(newProduct)
+    })
+    .then(res=> res.json())
+    .then(data => {
+        console.log(data);
+        if(data.insertedId){
+            Swal.fire({
+                title: 'success!',
+                text: 'Product added successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+        }
+    })
     
   };
   
