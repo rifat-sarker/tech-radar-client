@@ -6,12 +6,17 @@ import MyCart from "../components/MyCart";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import PrivateRoute from "./PrivateRoute";
+import Apple from "../components/Brands/Apple";
+import Nokia from "../components/Brands/Nokia";
+import Samsung from "../components/Brands/Samsung";
+import Google from "../components/Brands/Google";
+import Sony from "../components/Brands/Sony";
+import Huawei from "../components/Brands/Huawei";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
-        loader: ()=> fetch('http://localhost:5000/product'),
         children: [
             {
                 path: '/',
@@ -33,7 +38,33 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
+            },
+            {
+                path: 'apple',
+                element: <Apple></Apple>,
+                loader: ()=> fetch('http://localhost:5000/product'),
+            },
+            {
+                path: 'nokia',
+                element: <Nokia></Nokia>
+            },
+            {
+                path: 'samsung',
+                element: <Samsung></Samsung>
+            },
+            {
+                path: 'Google',
+                element: <Google></Google>
+            },
+            {
+                path: 'sony',
+                element: <Sony></Sony>
+            },
+            {
+                path: 'apple',
+                element: <Huawei></Huawei>
             }
+            
         ]
     }
 ])

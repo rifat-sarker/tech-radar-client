@@ -40,7 +40,6 @@ const AddProduct = () => {
   
   return (
     <div>
-      <Navbar></Navbar>
       <h1 className="text-4xl font-bold text-center pt-8">Add New Product</h1>
       <p className="text-center my-4 font-semibold">
         New technology product introduction strategy with considerations for <br />
