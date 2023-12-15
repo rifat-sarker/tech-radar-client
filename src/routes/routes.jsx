@@ -24,6 +24,7 @@ import HuaweiDetails from "../components/ProductDetails/HuaweiDetails";
 import NokiaDetails from "../components/ProductDetails/NokiaDetails";
 import GoogleDetails from "../components/ProductDetails/GoogleDetails";
 import SamsungDetails from "../components/ProductDetails/SamsungDetails";
+import AboutUs from "../components/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: 'login',
                 element: <Login></Login>
+            },
+            {
+                path: 'aboutUs',
+                element: <AboutUs></AboutUs>
             },
             {
                 path: 'register',

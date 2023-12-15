@@ -16,6 +16,9 @@ const Navbar = () => {
       <li>
         <NavLink to='/mycart'>My Cart</NavLink>
       </li>
+      <li>
+        <NavLink to='/aboutUs'>About Us</NavLink>
+      </li>
     </>
   );
   const SignOut =()=> {
