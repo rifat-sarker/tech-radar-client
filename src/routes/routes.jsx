@@ -13,6 +13,13 @@ import Google from "../components/Brands/Google";
 import Sony from "../components/Brands/Sony";
 import Huawei from "../components/Brands/Huawei";
 
+import HuaweiUpdate from "../components/BrandUpdate/HuaweiUpdate";
+import AppleUpdate from "../components/BrandUpdate/AppleUpdate";
+import SonyUpdate from "../components/BrandUpdate/SonyUpdate";
+import SamsungUpdate from "../components/BrandUpdate/SamsungUpdate";
+import GoogleUpdate from "../components/BrandUpdate/GoogleUpdate";
+import NokiaUpdate from "../components/BrandUpdate/NokiaUpdate";
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -68,7 +75,37 @@ const router = createBrowserRouter([
                 path: 'huawei',
                 element: <Huawei></Huawei>,
                 loader: ()=> fetch('http://localhost:5000/product'),
-            }
+            },
+            {
+                path: 'huawei/updateProduct/:id',
+                element: <PrivateRoute><HuaweiUpdate></HuaweiUpdate></PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'apple/updateProduct/:id',
+                element: <PrivateRoute><AppleUpdate></AppleUpdate></PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'sony/updateProduct/:id',
+                element: <PrivateRoute> <SonyUpdate></SonyUpdate> </PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'samsung/updateProduct/:id',
+                element: <PrivateRoute><SamsungUpdate></SamsungUpdate></PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'google/updateProduct/:id',
+                element: <PrivateRoute><GoogleUpdate></GoogleUpdate></PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'nokia/updateProduct/:id',
+                element: <PrivateRoute> <NokiaUpdate></NokiaUpdate> </PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
             
         ]
     }

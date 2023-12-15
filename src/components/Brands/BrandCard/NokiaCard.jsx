@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const NokiaCard = ({product}) => {
-  const { brand, name, imageURL, price, rating, type } = product;
+  const {_id, brand, name, imageURL, price, rating, type } = product;
   return (
     <div>
       <div className="card  lg:card-side bg-base-100 shadow-xl">
@@ -19,7 +21,7 @@ const NokiaCard = ({product}) => {
           <button className="btn btn-neutral">{price}</button>
           <button className="btn btn-neutral ">{rating}</button>
           <div className="flex gap-4 justify-center">
-            <p className="btn  btn-neutral">Update</p>
+            <Link to={`updateProduct/${_id}`}><p className="btn  btn-neutral">Update</p></Link>
             <p className="btn  btn-neutral">Details</p>
           </div>
         </div>

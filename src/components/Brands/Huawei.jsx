@@ -6,7 +6,7 @@ const Huawei = () => {
   const huaweiProduct = products.filter(
     (product) => product.brand === "Huawei"
   );
-  console.log(huaweiProduct);
+
 
   return (
     <div className="grid md:grid-cols-2 gap-8">
