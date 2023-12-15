@@ -19,7 +19,7 @@ const AppleCard = ({ product }) => {
             <button className="btn btn-neutral ">{rating}</button>
             <div className="flex gap-4 justify-center">
               <Link to={`updateProduct/${_id}`}><p className="btn  btn-neutral">Update</p></Link>
-              <p className="btn  btn-neutral">Details</p>
+              <Link to={`details/${_id}`}><p className="btn  btn-neutral">Details</p></Link>
             </div>
         </div>
       </div>

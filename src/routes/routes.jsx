@@ -12,13 +12,18 @@ import Samsung from "../components/Brands/Samsung";
 import Google from "../components/Brands/Google";
 import Sony from "../components/Brands/Sony";
 import Huawei from "../components/Brands/Huawei";
-
 import HuaweiUpdate from "../components/BrandUpdate/HuaweiUpdate";
 import AppleUpdate from "../components/BrandUpdate/AppleUpdate";
 import SonyUpdate from "../components/BrandUpdate/SonyUpdate";
 import SamsungUpdate from "../components/BrandUpdate/SamsungUpdate";
 import GoogleUpdate from "../components/BrandUpdate/GoogleUpdate";
 import NokiaUpdate from "../components/BrandUpdate/NokiaUpdate";
+import AppleDetails from "../components/ProductDetails/AppleDetails";
+import SonyDetails from "../components/ProductDetails/SonyDetails";
+import HuaweiDetails from "../components/ProductDetails/HuaweiDetails";
+import NokiaDetails from "../components/ProductDetails/NokiaDetails";
+import GoogleDetails from "../components/ProductDetails/GoogleDetails";
+import SamsungDetails from "../components/ProductDetails/SamsungDetails";
 
 const router = createBrowserRouter([
     {
@@ -27,8 +32,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>,
-                
+                element: <Home></Home>, 
             },
             {
                 path: 'addproduct',
@@ -104,6 +108,36 @@ const router = createBrowserRouter([
             {
                 path: 'nokia/updateProduct/:id',
                 element: <PrivateRoute> <NokiaUpdate></NokiaUpdate> </PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'apple/details/:id',
+                element: <PrivateRoute> <AppleDetails></AppleDetails> </PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'sony/details/:id',
+                element: <PrivateRoute> <SonyDetails></SonyDetails> </PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'huawei/details/:id',
+                element: <PrivateRoute> <HuaweiDetails></HuaweiDetails></PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'nokia/details/:id',
+                element: <PrivateRoute><NokiaDetails></NokiaDetails></PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'google/details/:id',
+                element: <PrivateRoute> <GoogleDetails></GoogleDetails> </PrivateRoute>,
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+            },
+            {
+                path: 'samsung/details/:id',
+                element: <PrivateRoute> <SamsungDetails></SamsungDetails></PrivateRoute>,
                 loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
             },
             
