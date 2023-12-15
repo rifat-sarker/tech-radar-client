@@ -3,7 +3,7 @@ import React from "react";
 const MobileApp = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content px-12 flex-col lg:flex-row-reverse">
         <img
           src={"https://i.ibb.co/ZNB0tPp/Tech-Radar-logo-RGB.png"}
           className="max-w-sm rounded-full shadow-2xl w-full h-96"
