@@ -5,6 +5,21 @@ const Brand = () => {
     const handleApple =()=>{
         navigate('/apple');
     }
+    const handleSamsung =()=>{
+        navigate('/samsung');
+    }
+    const handleHuawei =()=>{
+        navigate('/huawei');
+    }
+    const handleNokia =()=>{
+        navigate('/nokia');
+    }
+    const handleGoogle =()=>{
+        navigate('/google');
+    }
+    const handleSony =()=>{
+        navigate('/sony');
+    }
   return (
     <div>
       <h1 className="text-4xl text-center my-8">All Brands</h1>
@@ -26,7 +41,7 @@ const Brand = () => {
           </div>
         </div>
         {/* Huawei */}
-        <div className="card max-h-96 bg-base-100 shadow-xl ">
+        <div onClick={handleHuawei} className="card max-h-96 bg-base-100 shadow-xl ">
           <figure>
             <img
               className="w-full h-60"
@@ -43,7 +58,7 @@ const Brand = () => {
           </div>
         </div>
         {/* Samsung */}
-        <div className="card max-h-96 bg-base-100 shadow-xl ">
+        <div onClick={handleSamsung} className="card max-h-96 bg-base-100 shadow-xl ">
           <figure>
             <img
               className="w-full h-60"
@@ -60,7 +75,7 @@ const Brand = () => {
           </div>
         </div>
         {/* Nokia */}
-        <div className="card max-h-96 bg-base-100 shadow-xl ">
+        <div onClick={handleNokia} className="card max-h-96 bg-base-100 shadow-xl ">
           <figure>
             <img
               className="w-full h-60"
@@ -76,7 +91,7 @@ const Brand = () => {
           </div>
         </div>
         {/* Sony */}
-        <div className="card max-h-96 bg-base-100 shadow-xl ">
+        <div onClick={handleSony} className="card max-h-96 bg-base-100 shadow-xl ">
           <figure>
             <img
               className="w-full h-60"
@@ -92,7 +107,7 @@ const Brand = () => {
           </div>
         </div>
         {/* Google */}
-        <div className="card max-h-96 bg-base-100 shadow-xl ">
+        <div onClick={handleGoogle} className="card max-h-96 bg-base-100 shadow-xl ">
           <figure>
             <img
               className="w-full h-60"

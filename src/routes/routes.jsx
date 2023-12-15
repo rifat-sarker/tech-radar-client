@@ -46,23 +46,28 @@ const router = createBrowserRouter([
             },
             {
                 path: 'nokia',
-                element: <Nokia></Nokia>
+                element: <Nokia></Nokia>,
+                loader: ()=> fetch('http://localhost:5000/product'),
             },
             {
                 path: 'samsung',
-                element: <Samsung></Samsung>
+                element: <Samsung></Samsung>,
+                loader: ()=> fetch('http://localhost:5000/product')
             },
             {
                 path: 'Google',
-                element: <Google></Google>
+                element: <Google></Google>,
+                loader: ()=> fetch('http://localhost:5000/product'),
             },
             {
                 path: 'sony',
-                element: <Sony></Sony>
+                element: <Sony></Sony>,
+                loader: ()=> fetch('http://localhost:5000/product'),
             },
             {
-                path: 'apple',
-                element: <Huawei></Huawei>
+                path: 'huawei',
+                element: <Huawei></Huawei>,
+                loader: ()=> fetch('http://localhost:5000/product'),
             }
             
         ]
