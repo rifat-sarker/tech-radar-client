@@ -2,15 +2,15 @@ import React from "react";
 
 import Footer from "./footer";
 import Brand from "./Brand";
+import MobileApp from "./MobileApp";
 
 const Home = () => {
   
   return (
     <div>
-      {/* <Navbar></Navbar> */}
+      
       <Brand></Brand>
-      {/* footer */}
-      {/* <Footer></Footer> */}
+      <MobileApp></MobileApp>
     </div>
   );
 };

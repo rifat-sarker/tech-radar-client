@@ -14,18 +14,6 @@ const Root = () => {
       <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>
-
-      {/* <h1>Product length :{products.length} </h1> */}
-      {/* <div className="grid md:grid-cols-2 gap-8">
-        {
-          products.map((product) => (
-          <ProductCard
-           key={product._id}
-            product={product}
-            ></ProductCard>
-        ))
-        }
-      </div> */}
     </div>
   );
 };
