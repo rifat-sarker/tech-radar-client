@@ -30,7 +30,7 @@ const NokiaUpdate = () => {
     console.log(updatedProduct);
 
     //send to the server
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://tech-radar-server.vercel.app/product/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
