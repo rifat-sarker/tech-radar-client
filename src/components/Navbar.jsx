@@ -5,6 +5,7 @@ import userPicture from '../assets/user.png'
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
+  console.log(user);
   const navlinks = (
     <>
       <li>

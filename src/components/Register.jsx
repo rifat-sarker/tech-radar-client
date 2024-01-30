@@ -30,7 +30,7 @@ const Register = () => {
       setRegisterError("Your password should have at least one upper character");
       return;
     }
-    else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/.test(password)) {
+    else if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)) {
       setRegisterError("Password must contain at least one special character")
       return;
     }

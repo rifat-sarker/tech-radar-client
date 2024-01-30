@@ -40,10 +40,12 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
+        
         toast.success("login  successfully", {
           duration: 2000,
           position: "bottom-center",
         });
+        
       })
       .catch((error) => {
         console.error(error);
