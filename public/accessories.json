@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Headphone",
+    "image": "https://i.ibb.co/s9cbzNf/headphone-159569-1920.png",
+    "price": "$34",
+    "sale": "sale",
+    "discount": "-27%"
+  },
+  {
+    "id": 2,
+    "name": "Smartwatch",
+    "image": "https://i.ibb.co/kmL7WMb/apple-watch-series9-1-removebg-preview.png",
+    "price": "$50",
+    "sale": "sale",
+    "discount": "-27%"
+  },
+  {
+    "id": 3,
+    "name": "Headphone 2",
+    "image": "https://i.ibb.co/pwtnJSh/kiran-ck-LSNJ-pltdu8-unsplash-removebg-preview.png",
+    "price": "$45",
+    "sale": "sale",
+    "discount": "-27%"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch2",
+    "image": "https://i.ibb.co/2dL00Zk/rendering-smart-home-device-removebg-preview.png",
+    "price": "$34",
+    "sale": "sale",
+    "discount": "-27%"
+  },
+  {
+    "id": 5,
+    "name": "Headphone 3",
+    "image": "https://i.ibb.co/QC8T3LP/shiny-black-headphones-reflect-golden-nightclub-lights-generated-by-ai-removebg-preview.png",
+    "price": "$39",
+    "sale": "sale",
+    "discount": "-27%"
+  },
+  {
+    "id": 6,
+    "name": "Smartwatch 3",
+    "image" : "https://i.ibb.co/2dL00Zk/rendering-smart-home-device-removebg-preview.png", 
+    "price": "$34",
+    "sale": "sale",
+    "discount": "-27%"
+
+  },
+  {
+    "id": 7,
+    "name": "Xbox",
+    "image": "https://i.ibb.co/vHzmkvq/ritupon-baishya-WLv-NZWo6-VP0-unsplash-1-removebg-preview.png",
+    "price": "$34",
+    "sale": "sale",
+    "discount": "-47%"
+  },
+  {
+    "id": 8,
+    "name": "Monitor",
+    "image" : "https://i.ibb.co/2jx9Nmd/computer-screen-removebg-preview.png",
+    "price": "$50",
+    "sale": "sale",
+    "discount": "-27%"
+  },
+  {
+    "id": 9,
+    "name": "Phone Case",
+    "image" : "https://i.ibb.co/xYG8twk/mobile-phone-cases-mockup-product-showcase-removebg-preview.png",
+    "price": "$24",
+    "sale": "sale",
+    "discount": "-27%"
+  }
+]

@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "brand": "Apple",
+      "image": "https://i.ibb.co/b3C0Pk1/overview-bcphzsdb4fpu-og.png"
+    },
+    {
+      "id": 6,
+      "brand": "Google",
+      "image": "https://i.ibb.co/TtGwtWH/google-logo-dark-2880x1800-11311.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "Samsung",
+      "image": "https://i.ibb.co/rHNRxRM/samsung-logo-Know-Your-Codes-11zon-1000x480.webp"
+    },
+    {
+      "id": 3,
+      "brand": "Huawei",
+      "image": "https://i.ibb.co/mXBdP99/huawei-2156-1120.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Sony",
+      "image": "https://i.ibb.co/BZgPc7r/b5336f0645ee7d40c6547de48a92f608.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Nokia",
+      "image": "https://i.ibb.co/tLzMYRF/original-fcf474b241a17dc3e8198ca4b69a0e45.jpg"
+    }
+    
+  ]
+  
