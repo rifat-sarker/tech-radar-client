@@ -40,7 +40,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-        
+        navigate(location?.state ? location.state : "/");
         toast.success("login  successfully", {
           duration: 2000,
           position: "bottom-center",
