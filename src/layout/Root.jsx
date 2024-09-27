@@ -7,7 +7,7 @@ import AOS from "aos";
 const Root = () => {
   AOS.init();
   return (
-    <div className="bg-base-300">
+    <div className="bg-base-300 font-Inter">
       <Navbar></Navbar>
       <div className="max-w-6xl min-h-screen mx-auto p-4 ">
       <Outlet></Outlet>

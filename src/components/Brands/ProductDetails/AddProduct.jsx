@@ -15,7 +15,7 @@ const AddProduct = () => {
     const imageURL = form.imageURL.value;
     const newProduct = {name,brand,type,price,description,rating,imageURL}
     console.log(newProduct);
-    fetch('https://tech-radar-server.vercel.app/product', {
+    fetch('http://localhost:5000/product', {
         method: "POST",
         headers : {
             'content-type' : 'application/json'
